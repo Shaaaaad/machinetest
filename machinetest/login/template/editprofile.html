@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>editprofile</title>
+</head>
+<body>
+ <form action="{% url 'editprofile' id=data.id %}" method="post">
+              {% csrf_token %}
+
+
+
+
+
+
+                <input type="text" name="newusername" class="form-control" value="{{ data.username }}" placeholder="Edit user Name"  /><br>
+                <input type="text"  name="newemail" class="form-control" value="{{ data.email }}" placeholder="Edit email "  /><br>
+                <input type="text"  name="newpassword" class="form-control" value="{{ data.password }}" placeholder="Edit password"  /><br>
+
+
+
+
+              <!-- Submit button -->
+              <input type="submit" >
+
+
+            </form>
+</body>
+</html>
